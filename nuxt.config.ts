@@ -2,5 +2,8 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   extends: ['@nuxt/ui-pro'],
-  modules: ["@nuxt/ui"],
+  modules: ["@nuxt/ui", '@vueuse/nuxt'],
+  ui: {
+    icons: ['heroicons', 'logos', 'octicon', 'ph', 'simple-icons', 'uil']
+  }
 })

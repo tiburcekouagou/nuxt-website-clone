@@ -10,8 +10,15 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@iconify-json/heroicons": "^1.1.21",
+    "@iconify-json/logos": "^1.1.42",
+    "@iconify-json/octicon": "^1.1.54",
+    "@iconify-json/ph": "^1.1.13",
+    "@iconify-json/simple-icons": "^1.1.103",
+    "@iconify-json/uil": "^1.1.8",
     "@nuxt/ui": "^2.16.0",
     "@nuxt/ui-pro": "^1.2.0",
+    "@vueuse/nuxt": "^10.10.0",
     "nuxt": "^3.11.2",
     "vue": "^3.4.27",
     "vue-router": "^4.3.2"
