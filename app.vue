@@ -43,5 +43,38 @@
         >
       </div>
     </AppBanner> -->
+
+    <AppHeader :links="headerLinks" />
   </div>
 </template>
+
+<script setup lang="ts">
+
+const search = ref(null);
+const colorMode = useColorMode();
+const { headerLinks, searchLinks } = useNavigation();
+const color = computed(() =>
+  colorMode.value === "dark" ? "#020420" : "white"
+);
+
+useHead({
+  titleTemplate: (title) =>
+    title ? `${title} . Nuxt` : "Nuxt: The Intuitive Web Framework",
+  meta: [
+    { name: "viewport", content: "width=device-width, initial-scale=1" },
+    { key: "theme-color", name: "theme-color", content: color },
+  ],
+  link: [{ rel: "icon", type: "image/png", href: "/icon.png" }],
+  htmlAttrs: {
+    lang: "en",
+  },
+});
+
+useSeoMeta({
+
+  ogSiteName: "Nuxt",
+  ogType: "website",
+  twitterCard: "summary_large_image",
+  twitterSite: "nuxt_js",
+});
+</script>
