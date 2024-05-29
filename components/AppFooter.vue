@@ -24,7 +24,11 @@
       </UFooterColumns>
     </template>
 
-    <template #left> Copyright © {{ new Date().getFullYear() }} </template>
+    <template #left>
+      <p class="text-gray-500 dark:text-gray-400 text-sm">
+        Copyright &copy; 2016 - {{ new Date().getFullYear() }} Nuxt - <NuxtLink class="hover:underline" to="https://github.com/nuxt/nuxt/blob/main/LICENSE">MIT License</NuxtLink>
+      </p>
+    </template>
 
     <template #right>
       <UButton
