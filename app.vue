@@ -45,6 +45,12 @@
     </AppBanner> -->
 
     <AppHeader :links="headerLinks" />
+
+    <UMain>
+      <NuxtPage />
+    </UMain>
+
+    <AppFooter />
   </div>
 </template>
 
