@@ -20,5 +20,28 @@
         />
       </div>
     </AppBanner>
+
+    <!-- <AppBanner
+      id="nuxt-certification-early-bird-launch"
+      to="htpps://certification.nuxt.com"
+    >
+      <div class="flex items-center gap-2">
+        <UIcon
+          name="i-ph-medal-duotone"
+          class="w-5 h-5 flex-shrink-0 pointer-events-none"
+        />
+        <span
+          >The <span class="font-semibold">Nuxt Certification Program</span> by
+          VueSchool is out !</span
+        >
+        <UButton
+          color="white"
+          trailing-icon="i-ph-arrow-right"
+          size="2xs"
+          class="rounded-full"
+          >Register</UButton
+        >
+      </div>
+    </AppBanner> -->
   </div>
 </template>
