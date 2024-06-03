@@ -115,6 +115,11 @@
       <template #contributors>
         <HomeSectionContributors />
       </template>
+
+      <template #testimonials>
+        <HomeSectionTestimonials :testimonials="section.testimonials" />
+      </template>
+      
     </ULandingSection>
   </div>
 </template>
