@@ -71,6 +71,47 @@
         alt="Nuxt Logo in uwu style"
       />
     </ULandingHero>
+
+    <UContainer>
+      <ULandingLogos
+        :title="page?.logos?.title"
+        class="lg:pt-12 text-gray-500 dark:text-gray-400 dark:bg-gray-900"
+      >
+        <BrandsGithub class="hidden md:block h-7" />
+        <BrandsOpenai class="h-5 hd:h-8" />
+        <BrandsNasa class="h-4 md:h-6" />
+        <BrandsGoogle class="h-5 md:h-8" />
+        <BrandsFedora class="h-4 md:h-7" />
+        <BrandsGitlab class="hidden sm:block h-4 md:h-7" />
+        <BrandsUpwork class="hidden md:block h-8" />
+      </ULandingLogos>
+    </UContainer>
+
+    <!--  -->
+    <ULandingSection
+      v-for="(section, index) of page.sections"
+      :key="index"
+      :slot="section.slot"
+      :class="section.class"
+      :align="section.align"
+      :links="section.links"
+    >
+    <template #title>
+      <span v-html="section?.title" />
+    </template>
+
+    <template v-if="section.description" #description>
+      <span v-html="section.description" />
+    </template>
+
+    <template #features>
+      <HomeSectionFeatures :features="section.features" />
+    </template>
+
+    <template #integrations>
+      <HomeSectionIntegrations :integrations="section.integrations" />
+    </template>
+    </ULandingSection>
   </div>
 </template>
 
