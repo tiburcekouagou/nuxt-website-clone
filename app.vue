@@ -51,6 +51,15 @@
     </UMain>
 
     <AppFooter />
+
+    
+  <!-- <ClientOnly>
+    <UcontentSearch
+    ref="search"
+      />
+  </ClientOnly> -->
+  <UNotifications />
+
   </div>
 </template>
 
