@@ -5,5 +5,10 @@ export default defineNuxtConfig({
   modules: ["@nuxt/ui", '@vueuse/nuxt', "@nuxt/content", "@nuxt/image"],
   ui: {
     icons: ['heroicons', 'logos', 'octicon', 'ph', 'simple-icons', 'uil']
+  },
+  image: {
+    ipx: {
+      baseURL: 'https://ipx.nuxt.com'
+    }
   }
 })

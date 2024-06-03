@@ -96,21 +96,25 @@
       :align="section.align"
       :links="section.links"
     >
-    <template #title>
-      <span v-html="section?.title" />
-    </template>
+      <template #title>
+        <span v-html="section?.title" />
+      </template>
 
-    <template v-if="section.description" #description>
-      <span v-html="section.description" />
-    </template>
+      <template v-if="section.description" #description>
+        <span v-html="section.description" />
+      </template>
 
-    <template #features>
-      <HomeSectionFeatures :features="section.features" />
-    </template>
+      <template #features>
+        <HomeSectionFeatures :features="section.features" />
+      </template>
 
-    <template #integrations>
-      <HomeSectionIntegrations :integrations="section.integrations" />
-    </template>
+      <template #integrations>
+        <HomeSectionIntegrations :integrations="section.integrations" />
+      </template>
+
+      <template #contributors>
+        <HomeSectionContributors />
+      </template>
     </ULandingSection>
   </div>
 </template>
