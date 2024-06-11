@@ -43,7 +43,7 @@
           icon="i-ph-video-duotone"
           @click="videoModalOpen = true"
         >
-          What is Nuxt ?
+          What is Nuxt?
         </UButton>
 
         <UModal v-model="videoModalOpen">
