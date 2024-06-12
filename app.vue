@@ -52,25 +52,29 @@
 
     <AppFooter />
 
-    
-  <!-- <ClientOnly>
+    <!-- <ClientOnly>
     <UcontentSearch
     ref="search"
       />
   </ClientOnly> -->
-  <UNotifications />
-
+    <UNotifications />
   </div>
 </template>
 
 <script setup lang="ts">
-
 const search = ref(null);
 const colorMode = useColorMode();
 const { headerLinks, searchLinks } = useNavigation();
 const color = computed(() =>
   colorMode.value === "dark" ? "#020420" : "white"
 );
+
+const { data: navigation } = await useLazyAsyncData(
+  "navigation",
+  () => fetchContentNavigation(),
+  { default: () => [] }
+);
+
 
 useHead({
   titleTemplate: (title) =>
@@ -86,10 +90,12 @@ useHead({
 });
 
 useSeoMeta({
-
   ogSiteName: "Nuxt",
   ogType: "website",
   twitterCard: "summary_large_image",
   twitterSite: "nuxt_js",
 });
+
+// Provide
+provide('navigation', navigation);
 </script>

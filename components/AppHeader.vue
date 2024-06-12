@@ -43,7 +43,7 @@ defineProps<{
 }>();
 
 const logo = ref(null);
-const navigation = inject<Ref<NavItem>>("navigation");
+// const navigation = inject<Ref<NavItem>>("navigation");
 
 const stats = useStats();
 const { metaSymbol } = useShortcuts();
